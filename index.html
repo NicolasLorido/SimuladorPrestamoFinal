@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simulador Prestamo</title>   
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link href="/img/fotomini.png" rel="icon">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<!--SECCION FORMULARIO-->
+<div id="div-formulario">
+	<section class="section">
+		<h2>COMPLETAR DATOS PARA SIMULAR PRESTAMO</h2>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="controls" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre no puede contener numeros, puntos, guiones y guion bajo.</p>
+			</div>
+			<!-- Grupo: Apellido -->
+			<div class="formulario__grupo" id="grupo__apellido">
+				<label for="apellido" class="formulario__label">Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="controls" class="formulario__input" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre no puede contener numeros, puntos, guiones y guion bajo.</p>
+			</div>
+			<!-- Grupo: DNI -->
+			<div class="formulario__grupo" id="grupo__dni">
+				<label for="dni" class="formulario__label">DNI</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="controls" class="formulario__input" name="dni" id="dni" placeholder="Ingrese su DNI">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El DNI solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="controls" class="formulario__input" name="telefono" id="telefono" placeholder="Ingrese su telefono">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="controls" class="formulario__input" name="correo" id="correo" placeholder="Ingrese su Correo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+			<div class="formulario__grupo formulario__grupo-btn-continuar">
+				<button type="submit" class="botons" class="formulario__btn">Continuar</button>
+			</div>
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor complete el formulario correctamente. </p>
+			</div>
+		</form>
+	</section>
+</div>
+ <!--SECCION CALCULAR PRESTAMO-->
+<div id="div-prestamo">
+	<section class="section">
+	  <h2 id="sumarNombre"></h2>
+	  <form id="formulario-simulador">
+		<select id="sueldo" class="controls">
+		  <option value="error" id="error">Seleccione su sueldo</option>
+		  <option value="noPrestamo" id="noPrestamo">$0 - $50.000</option>
+		  <option value="hasta250" id="hasta250">$50.000 - $100.000</option>
+		  <option value="hasta600" id="hasta600">$100.000 - $200.000</option>
+		  <option value="hasta15m" id="hasta15m">$200.000 - $500.000</option>
+		  <option value="hasta3m" id="hasta3m">$500.000 - $1.000.000</option>
+		</select>
+		<div>
+		  <span id="mensaje"></span>
+		  <input id="montoDeseado" class="controls" type="number" min="0" placeholder="Indicar monto deseado"></input>
+		</div>
+		<select id="cuotas" class="controls">
+		  <option value="errorr" id="errorr">Seleccione el plazo</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+		  <option value="28">28</option>
+		  <option value="29">29</option>
+		  <option value="30">30</option>
+		  <option value="31">31</option>
+		  <option value="32">32</option>
+		  <option value="33">33</option>
+		  <option value="34">34</option>
+		  <option value="35">35</option>
+		  <option value="36">36</option>
+		  <option value="37">37</option>
+		  <option value="38">38</option>
+		  <option value="39">39</option>
+		  <option value="40">40</option>
+		  <option value="41">41</option>
+		  <option value="42">42</option>
+		  <option value="43">43</option>
+		  <option value="44">44</option>
+		  <option value="45">45</option>
+		  <option value="46">46</option>
+		  <option value="47">47</option>
+		  <option value="48">48</option>
+		</select><br>
+	  </form>
+	  <button class="botons" id="calcular">Calcular</button>
+	  <span id="mensajeSimulador"></span>
+	</section>
+	<section class="section-volver">
+	  <button id="volverInicio" class="botons">Volver a inicio</button>
+	</section>
+</div>
+	<!--SECCION DETALLE PRESTAMO-->
+<div id="div-detalle">
+	<section class="section">
+	<h2>Detalle</h2>
+	<ul>
+		<li id="montoSolicitado" class="controls">
+		Monto solicitado:
+		</li>
+		<li id="cuotasSeleccionadas" class="controls">
+		Cuotas seleccionadas: 
+		</li>
+		<li id="cuotasDe" class="controls">
+		Cuotas de: 
+		</li>
+		<li id="totalDevolver" class="controls">
+		Total a devolver: 
+		</li>
+	</ul>
+	<input id="volverSimular" class="botons" type="submit" value="Volver a simular otro prestamo">
+	<p>Si desea ver más en detalle la simulación, presione el siguiente botón</p>
+	<input id="mandarMail" class="botons" type="submit" value="Enviar mail">
+	<span id="mensajeMail"></span>
+	</section>
+	<section class="section-volver">
+		<button id="volverInicio2" class="botons">Volver a inicio</button>
+	</section>
+</div>
+
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/JS/funciones.js"></script>
+<script src="/JS/index.js"></script>
+</body>
+</html>
